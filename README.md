@@ -1,126 +1,129 @@
 🚨 BreachRadar
+Keyword-Driven Threat Monitoring Platform
+<p align="center"> <b>Live Demo:</b> https://breachradar.onrender.com <br/> <b>GitHub Repo:</b> https://github.com/SyedJameel8251/BreachRadar </p>
+📌 Overview
 
-BreachRadar is a deployed full-stack threat monitoring platform that simulates keyword-driven breach detection, risk scoring, and alert lifecycle management.
+BreachRadar is a deployed full-stack threat monitoring platform that simulates keyword-based breach detection, risk scoring, and alert lifecycle management.
 
-🔗 Live Demo: https://breachradar.onrender.com
+The system allows users to:
+Monitor custom threat keywords
+Automatically generate alerts
+Prioritize threats using risk scores
+Track alert resolution
+Visualize severity analytics via dashboard
+This project demonstrates backend scanning architecture, secure authentication, and cloud deployment.
 
-💻 GitHub: https://github.com/SyedJameel8251/BreachRadar
+🚀 Key Features:
 
-🧠 Overview
-
-BreachRadar allows users to monitor specific keywords (e.g., "credit card leak", "email database") and automatically generates alerts when matching breach data is detected.
-
-The system includes:
-
-Authentication (JWT-based)
-
-Risk scoring engine
-
-Alert lifecycle management
-
-Interactive analytics dashboard
-
-Cloud deployment with MongoDB Atlas
-
-This project demonstrates backend scanning logic, secure authentication, cloud database integration, and production deployment.
-
-🚀 Features
-🔐 Authentication
-
-JWT-based Login
-
-Demo Login Support
-
+🔐 Authentication:
+JWT-based login
+Demo login support
 Protected API routes
+Password hashing using bcrypt
 
-🔎 Keyword Monitoring
-
-Add keywords for monitoring
-
-Matching engine scans breach dataset
-
+🔎 Keyword Monitoring Engine:
+Add custom monitoring keywords
+Scans breach dataset for matches
 Prevents duplicate alerts
 
-🚨 Alert Generation
+🚨 Intelligent Alert System
+Automatic alert generation
 
-Automatic alert creation when breach matches keyword
+Severity mapping:
+High → 90 Risk Score
+Medium → 60 Risk Score
+Low → 30 Risk Score
+Pending / Resolved lifecycle tracking
 
-Severity-based risk scoring:
+📊 Analytics Dashboard:
+Total alert counter
+Severity distribution
+Chart.js visualization
+Real-time data refresh
 
-High → 90
+☁️ Cloud Deployment:
+MongoDB Atlas (Cloud DB)
+Render (Production Hosting)
+Fully deployed & accessible online
 
-Medium → 60
-
-Low → 30
-
-📊 Dashboard & Analytics
-
-Total alerts
-
-Severity breakdown
-
-Interactive Chart.js visualization
-
-Pending / Resolved status tracking
-
-☁️ Production Deployment
-
-MongoDB Atlas (Cloud Database)
-
-Render (Cloud Hosting)
-
-Fully deployed and accessible online
-
-🛠 Tech Stack
-
-Backend
-
+🛠 Tech Stack:
+Backend:
 Node.js
-
 Express.js
-
 MongoDB Atlas
-
 Mongoose
+JWT Authentication
+Bcrypt
 
-JWT (Authentication)
-
-Bcrypt (Password Hashing)
-
-Frontend
-
-HTML
-
-CSS
-
+Frontend:
+HTML5
+CSS3
 Vanilla JavaScript
-
 Chart.js
-
 Deployment
-
 Render
-
 MongoDB Atlas
 
-🏗 Architecture
+🏗 System Architecture
+User Login
+   ↓
+Keyword Input
+   ↓
+Matching Engine
+   ↓
+Alert Generation
+   ↓
+Risk Scoring
+   ↓
+Dashboard Visualization
 
-User → Authentication → Keyword Input
-→ Matching Engine → Alert Creation
-→ Risk Scoring → Dashboard Visualization
-
-🔄 Alert Workflow
-
-User logs in
-
+🔄 Alert Workflow:
+User logs in (JWT authentication)
 Adds monitoring keyword
-
 System scans breach collection
-
 Matching breach triggers alert
-
 Risk score calculated
+Alert appears in dashboard
+User marks alert as resolved
 
-Alert displayed in dashboard
+💻 Local Setup:
 
-User marks alert as Resolved
+Clone repository:
+git clone https://github.com/SyedJameel8251/BreachRadar.git
+cd BreachRadar
+npm install
+
+Create .env file:
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret
+PORT=5000
+
+Run locally:
+npm run dev
+
+Visit:
+http://localhost:5000
+🌐 Live Application
+
+🔗 https://breachradar.onrender.com
+
+🎯 What This Project Demonstrates:
+Secure authentication implementation
+Backend scanning logic
+Risk prioritization engine
+Cloud database integration
+Production debugging & deployment
+Full-stack architecture
+
+📈 Future Enhancements:
+Scheduled automated scanning
+Email notification system
+Real-time updates (WebSockets)
+Advanced scoring algorithm
+Role-based access control
+
+👨‍💻 Author:
+
+Syed Jameel
+B.Tech CSE (2025)
+Backend & Cybersecurity Enthusiast
