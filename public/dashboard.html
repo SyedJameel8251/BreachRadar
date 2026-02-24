@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ThreatWatch Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>ThreatWatch</h2>
+    <ul>
+      <li onclick="showSection('keywords')">🔑 Keywords</li>
+      <li onclick="showSection('alerts')">🚨 Alerts</li>
+      <li onclick="showSection('dashboard')">📊 Dashboard</li>
+      <li onclick="toggleDarkMode()">🌙 Toggle Mode</li>
+      <li onclick="logout()">🚪 Logout</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <!-- Dashboard Section -->
+    <div id="dashboardSection" class="section hidden">
+      <h2>Dashboard Overview</h2>
+      <div class="stats" id="stats"></div>
+      <canvas id="severityChart" height="120"></canvas>
+    </div>
+
+    <!-- Keywords Section -->
+    <div id="keywordsSection" class="section">
+      <h2>🔍 Threat Scanner</h2>
+
+      <div class="scanner-card">
+        <p>Enter a keyword to scan simulated breach intelligence data.</p>
+        <input type="text" id="keyword" placeholder="e.g. credit card leak">
+        <button onclick="startScan()">Scan Threat</button>
+      </div>
+
+      <h3>Suggested Threats</h3>
+      <div id="suggestions" class="suggestions"></div>
+
+      <div id="scanningMessage" class="scanning hidden">
+        🔎 Scanning threat intelligence feeds...
+      </div>
+    </div>
+
+    <!-- Alerts Section -->
+    <div id="alertsSection" class="section hidden">
+      <h2>Alerts</h2>
+
+      <div class="filter-buttons">
+        <button onclick="filterAlerts('All')">All</button>
+        <button onclick="filterAlerts('Pending')">Pending</button>
+        <button onclick="filterAlerts('Resolved')">Resolved</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Severity</th>
+            <th>Risk</th>
+            <th>Source</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="alertsTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
