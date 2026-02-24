@@ -129,6 +129,8 @@ Role-based access control
 
 <h2>👨‍💻 Author:</h2>
 
-Syed Jameel
-B.Tech CSE (2025)
-Backend & Cybersecurity Enthusiast
+<p>Syed Jameel</p>
+<p>B.Tech CSE (2025)</p>
+<p>Backend & Cybersecurity Enthusiast</p>
+
+
