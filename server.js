@@ -14,8 +14,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-console.log(process.env.MONGO_URI);
-
 const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
 
@@ -36,8 +34,12 @@ app.get("/api/keywords", (req, res) => {
   res.send("Manual keywords route");
 });
 
-app.get("/", (req, res) => {
-  res.send("ThreatWatch API Running...");
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/api/protected", protect, (req, res) => {
