@@ -1,136 +1,211 @@
-<h1>🚨 BreachRadar</h1>
-Keyword-Driven Threat Monitoring Platform
-<p align="center"> <b>Live Demo:</b> https://breachradar.onrender.com <br/> <b>GitHub Repo:</b> https://github.com/SyedJameel8251/BreachRadar </p>
-<h2>📌 Overview:</h2>
+<h1 align="center">🚨 BreachRadar – Keyword-Driven Threat Monitoring Platform</h1>
 
-BreachRadar is a deployed full-stack threat monitoring platform that simulates keyword-based breach detection, risk scoring, and alert lifecycle management.
+<p align="center">
+  A Full-Stack Threat Intelligence Simulation Platform <br>
+  Built using Node.js, Express, MongoDB Atlas & Deployed on Render
+</p>
 
-<div>
-<h3>The system allows users to:</h3>
-Monitor custom threat keywords
-Automatically generate alerts
-Prioritize threats using risk scores
-Track alert resolution
-Visualize severity analytics via dashboard
-This project demonstrates backend scanning architecture, secure authentication, and cloud deployment.
-</div>
+<p align="center">
+  <a href="https://breachradar.onrender.com" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen?style=for-the-badge">
+  </a>
+  <a href="https://github.com/SyedJameel8251/BreachRadar" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge">
+  </a>
+</p>
 
-<h2>🚀 Key Features:</h2>
+<hr>
 
-<h3>🔐 Authentication:</h3>
-<div>JWT-based login
-Demo login support
-Protected API routes
-Password hashing using bcrypt</div>
+<h2>🚀 Live Deployment</h2>
 
-<h3>🔎 Keyword Monitoring Engine:</h3>
-Add custom monitoring keywords
-Scans breach dataset for matches
-Prevents duplicate alerts
+<p>
+🔗 <strong>Live Application:</strong>  
+<a href="https://breachradar.onrender.com">
+https://breachradar.onrender.com
+</a>
+</p>
 
-<h3>🚨 Intelligent Alert System:</h3>
-Automatic alert generation
+<p>
+💻 <strong>GitHub Repository:</strong>  
+<a href="https://github.com/SyedJameel8251/BreachRadar">
+https://github.com/SyedJameel8251/BreachRadar
+</a>
+</p>
 
-<h4>Severity mapping:</h4>
-High → 90 Risk Score
-Medium → 60 Risk Score
-Low → 30 Risk Score
-Pending / Resolved lifecycle tracking
+<hr>
 
-<h3>📊 Analytics Dashboard:</h3>
-Total alert counter
-Severity distribution
-Chart.js visualization
-Real-time data refresh
+<h2>📌 Project Overview</h2>
 
-<h3>☁️ Cloud Deployment:</h3>
-MongoDB Atlas (Cloud DB)
-Render (Production Hosting)
-Fully deployed & accessible online
+<p>
+BreachRadar is a deployed full-stack threat monitoring platform that simulates keyword-based breach detection and risk prioritization.
+</p>
 
-<h3>🛠 Tech Stack:</h3>
-<h4>Backend:</h4>
-Node.js
-Express.js
-MongoDB Atlas
-Mongoose
-JWT Authentication
-Bcrypt
+<p>
+Users can monitor custom keywords (e.g., “credit card leak”, “email database”), and the system automatically generates alerts when matching breach data is detected.
+</p>
 
-<h4>Frontend:</h4>
-HTML5
-CSS3
-Vanilla JavaScript
-Chart.js
-Deployment
-Render
-MongoDB Atlas
+<p>
+The platform includes secure authentication, alert lifecycle management, risk scoring, and an analytics dashboard with visualization.
+</p>
 
-<div>
-<p align="center">🏗 System Architecture
-<p align="center">User Login
-<p align="center"> ↓
-<p align="center">Keyword Input
-   <p align="center">↓
-<p align="center">Matching Engine
-   <p align="center">↓
-<p align="center">Alert Generation
-   <p align="center">↓
-<p align="center">Risk Scoring
-   <p align="center">↓
-<p align="center">Dashboard Visualization
-</div>
+<hr>
 
-<h3>🔄 Alert Workflow:</h3>
-User logs in (JWT authentication)
-Adds monitoring keyword
-System scans breach collection
-Matching breach triggers alert
-Risk score calculated
-Alert appears in dashboard
-User marks alert as resolved
+<h2>✨ Key Features</h2>
 
-<h3>💻 Local Setup:</h3>
+<ul>
+  <li>🔐 JWT-Based Authentication (Login / Demo Access)</li>
+  <li>🔎 Keyword Monitoring Engine</li>
+  <li>🚨 Automatic Alert Generation</li>
+  <li>📊 Risk Scoring System (High / Medium / Low)</li>
+  <li>🔄 Alert Status Management (Pending → Resolved)</li>
+  <li>📈 Interactive Dashboard with Chart.js</li>
+  <li>☁️ Cloud Database Integration (MongoDB Atlas)</li>
+  <li>🌐 Production Deployment on Render</li>
+</ul>
 
-<h4>Clone repository:</h4>
-<p>git clone https://github.com/SyedJameel8251/BreachRadar.git</p>
-<p>cd BreachRadar</p>
-<p>npm install</p>
+<hr>
 
-<h4>Create .env file:</h4>
-<p>MONGO_URI=your_mongodb_connection_string</p>
-<p>JWT_SECRET=your_secret</p>
-<p>PORT=5000</p>
+<h2>🛠 Tech Stack</h2>
 
-<h4>Run locally:</h4>
+<h3>Backend</h3>
+<ul>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>MongoDB Atlas</li>
+  <li>Mongoose ODM</li>
+  <li>JWT (Authentication)</li>
+  <li>Bcrypt (Password Hashing)</li>
+</ul>
+
+<h3>Frontend</h3>
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>Vanilla JavaScript</li>
+  <li>Chart.js</li>
+</ul>
+
+<h3>Deployment & Cloud</h3>
+<ul>
+  <li>MongoDB Atlas (Cloud Database)</li>
+  <li>Render (Web Hosting)</li>
+  <li>Environment Variables for Security</li>
+</ul>
+
+<hr>
+
+<h2>📂 Project Structure</h2>
+
+<pre>
+BreachRadar/
+│
+├── models/        → Mongoose Schemas (User, Breach, Alert, Keyword)
+├── routes/        → API Route Controllers
+├── middleware/    → Authentication Middleware
+├── public/        → Static Frontend (HTML, CSS, JS)
+│
+├── config/        → Database Configuration
+├── server.js      → Main Application Entry Point
+└── package.json   → Dependencies & Scripts
+</pre>
+
+<hr>
+
+<h2>⚙️ Installation & Local Setup</h2>
+
+<h3>1️⃣ Clone the Repository</h3>
+
+<pre>
+git clone https://github.com/SyedJameel8251/BreachRadar.git
+cd BreachRadar
+</pre>
+
+<h3>2️⃣ Install Dependencies</h3>
+
+<pre>
+npm install
+</pre>
+
+<h3>3️⃣ Create Environment Variables</h3>
+
+Create a <code>.env</code> file in the root directory:
+
+<pre>
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+</pre>
+
+<h3>4️⃣ Start the Server</h3>
+
+<pre>
 npm run dev
+</pre>
 
-<h4>Visit:</h4>
+Visit:
+
+<pre>
 http://localhost:5000
+</pre>
 
-<h3>🌐 Live Application</h3>
+<hr>
 
-🔗 https://breachradar.onrender.com
+<h2>🔄 Alert Workflow</h2>
 
-<h3>🎯 What This Project Demonstrates:</h3>
-Secure authentication implementation
-Backend scanning logic
-Risk prioritization engine
-Cloud database integration
-Production debugging & deployment
-Full-stack architecture
+<ol>
+  <li>User logs in via JWT authentication</li>
+  <li>User adds monitoring keyword</li>
+  <li>System scans breach dataset</li>
+  <li>Matching breach triggers alert</li>
+  <li>Risk score assigned based on severity</li>
+  <li>Alert displayed in dashboard</li>
+  <li>User marks alert as Resolved</li>
+</ol>
 
-<h3>📈 Future Enhancements:</h3>
-Scheduled automated scanning
-Email notification system
-Real-time updates (WebSockets)
-Advanced scoring algorithm
-Role-based access control
+<hr>
 
-<h2>👨‍💻 Author:</h2>
+<h2>🎯 Learning Outcomes</h2>
 
-<p>Syed Jameel</p>
-<p>B.Tech CSE (2025)</p>
-<p>Backend & Cybersecurity Enthusiast</p>
+<ul>
+  <li>Designed backend scanning architecture</li>
+  <li>Implemented JWT authentication securely</li>
+  <li>Built risk scoring & alert lifecycle logic</li>
+  <li>Integrated cloud database (MongoDB Atlas)</li>
+  <li>Deployed production-ready full-stack application</li>
+  <li>Debugged real-world deployment & networking issues</li>
+</ul>
 
+<hr>
 
+<h2>🔒 Security Implementation</h2>
+
+<ul>
+  <li>Password hashing using Bcrypt</li>
+  <li>JWT-based protected API routes</li>
+  <li>Environment variables for sensitive credentials</li>
+  <li>Cloud firewall configuration (MongoDB Atlas IP Whitelisting)</li>
+</ul>
+
+<hr>
+
+<h2>👨‍💻 Author</h2>
+
+<p>
+<strong>Syed Jameel</strong><br>
+B.Tech Computer Science (2025)<br>
+Aspiring Backend & Cybersecurity Developer<br>
+</p>
+
+<hr>
+
+<h2>📜 License</h2>
+
+<p>
+This project is developed for academic and portfolio purposes.
+</p>
+
+<hr>
+
+<p align="center">
+⭐ If you found this project helpful, consider giving it a star on GitHub!
+</p>
